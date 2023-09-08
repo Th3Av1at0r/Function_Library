@@ -6,14 +6,14 @@
 //
 
 #include <iostream>
-
-
+#include <iomanip>
+using namespace std;
 
 int main(int argc, const char * argv[]) {
     bool swaped;
     int i;
-    int array[10] = {7, 8, 9, 67, 4, 5, 23, 1, 99, 45};
-    int n = 10;
+    int array[20] = {23, 34, 55, 77, 2, 5, 99, 12, 41, 754, 1, 25, 80, 30, 10, 27, 76, 79, 35, 85};
+    int n = 20;
     int transfer_variable;
     do
     {
@@ -33,11 +33,18 @@ int main(int argc, const char * argv[]) {
     }
     while(swaped == true);
     
-    i = 0;
+    i = 1;
     
-    while(i < n)
+    while(i <= n)
     {
-        std::cout << array[i] << "\n";
+        if (i % 8 == 0)
+        {
+            std::cout << setw(10) << array[i] << "\n";
+        }
+        else
+        {
+            std::cout << setw(10) << array[i];
+        };
         
         i += 1;
     }
